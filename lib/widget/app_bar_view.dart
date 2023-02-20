@@ -2,14 +2,14 @@
 
 import 'package:flutter/material.dart';
 
-class AppBArView extends StatefulWidget {
-  const AppBArView({super.key});
+class AppBarView extends StatefulWidget {
+  const AppBarView({super.key});
 
   @override
-  State<AppBArView> createState() => _MyWidgetState();
+  State<AppBarView> createState() => _MyWidgetState();
 }
 
-class _MyWidgetState extends State<AppBArView> {
+class _MyWidgetState extends State<AppBarView> {
   final TextEditingController _controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -89,6 +89,7 @@ class _MyWidgetState extends State<AppBArView> {
                     controller: _controller,
                     decoration: InputDecoration(
                       suffixIcon: const Icon(Icons.search),
+                      hintText: 'qidiruv',
                       filled: true,
                       // focusColor: const Color.fromARGB(255, 5, 52, 80),
                       fillColor: const Color.fromARGB(255, 101, 161, 218),
