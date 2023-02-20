@@ -1,8 +1,6 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class AppBArView extends StatefulWidget {
   const AppBArView({super.key});
@@ -31,11 +29,12 @@ class _MyWidgetState extends State<AppBArView> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(width: 50),
-                row1('Category'),
-                row1('Video reviewa'),
-                row1('contact'),
-                row1('Employment'),
-                row1('Leave feedback'),
+                row1('Uy'),
+                row1('Katalog'),
+                row1('Vedio sharhlar'),
+                row1('Kontaklar'),
+                row1('Bandlik'),
+                row1('Fikr Qoldiring'),
                 Container(
                   alignment: Alignment.center,
                   height: 25,
@@ -45,7 +44,7 @@ class _MyWidgetState extends State<AppBArView> {
                     color: Colors.red,
                   ),
                   child: const Text(
-                    'Discounts',
+                    'Chegirmalar',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -72,11 +71,11 @@ class _MyWidgetState extends State<AppBArView> {
                 const SizedBox(
                   width: 40,
                 ),
-                SizedBox(
-                  height: 80,
-                  width: 140,
-                  child: Image.asset('img/home.jpg'),
-                ),
+                // SizedBox(
+                //   height: 80,
+                //   width: 140,
+                //   child: Image.asset('img/home.jpg'),
+                // ),
                 IconButton(
                     onPressed: () {},
                     icon: const Icon(
@@ -108,7 +107,7 @@ class _MyWidgetState extends State<AppBArView> {
                         size: 20,
                       ),
                       Text(
-                        'Addesses',
+                        'Manzillar',
                         style: TextStyle(color: Colors.white),
                       ),
                     ],
@@ -123,7 +122,7 @@ class _MyWidgetState extends State<AppBArView> {
                         size: 20,
                       ),
                       Text(
-                        'Basket',
+                        'Savat',
                         style: TextStyle(color: Colors.white),
                       ),
                     ],
@@ -138,7 +137,7 @@ class _MyWidgetState extends State<AppBArView> {
                         size: 20,
                       ),
                       Text(
-                        'Registration',
+                        'Ro\'yxattan o\'tish ',
                         style: TextStyle(color: Colors.white),
                       ),
                     ],
@@ -153,7 +152,7 @@ class _MyWidgetState extends State<AppBArView> {
                         size: 20,
                       ),
                       Text(
-                        'Favorites',
+                        'Sevimlilar',
                         style: TextStyle(color: Colors.white),
                       ),
                     ],
