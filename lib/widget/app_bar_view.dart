@@ -1,6 +1,8 @@
-// ignore_for_file: sort_child_properties_last
-
+import 'package:dafna/widget/appBar_widget.dart/katalog.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+import 'drawer_view.dart';
 
 class AppBarView extends StatefulWidget {
   const AppBarView({super.key});
@@ -11,6 +13,7 @@ class AppBarView extends StatefulWidget {
 
 class _MyWidgetState extends State<AppBarView> {
   final TextEditingController _controller = TextEditingController();
+  bool menu = false;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,18 +26,40 @@ class _MyWidgetState extends State<AppBarView> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.only(right: 30, left: 30),
+            padding: const EdgeInsets.only(right: 50, left: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(width: 50),
-                row1('Uy'),
-                row1('Katalog'),
-                row1('Vedio sharhlar'),
-                row1('Kontaklar'),
-                row1('Bandlik'),
-                row1('Fikr Qoldiring'),
+                TextButton(
+                    onPressed: () {},
+                    child: const Text('Asosiy',
+                        style: TextStyle(color: Colors.white))),
+                TextButton(
+                    onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Katalog(),
+                        )),
+                    child: const Text('Katalog',
+                        style: TextStyle(color: Colors.white))),
+                TextButton(
+                    onPressed: () {},
+                    child: const Text('Vedio sharhlar',
+                        style: TextStyle(color: Colors.white))),
+                TextButton(
+                    onPressed: () {},
+                    child: const Text('Kontaklar',
+                        style: TextStyle(color: Colors.white))),
+                TextButton(
+                    onPressed: () {},
+                    child: const Text('Bandlik',
+                        style: TextStyle(color: Colors.white))),
+                TextButton(
+                    onPressed: () {},
+                    child: const Text('Fikr Qoldiring',
+                        style: TextStyle(color: Colors.white))),
                 Container(
                   alignment: Alignment.center,
                   height: 25,
@@ -48,7 +73,7 @@ class _MyWidgetState extends State<AppBarView> {
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
-                const SizedBox(width: 100),
+                const SizedBox(width: 80),
                 TextButton(
                   onPressed: () {},
                   child: const Text(
@@ -63,21 +88,40 @@ class _MyWidgetState extends State<AppBarView> {
             height: 10,
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 30, left: 30),
+            padding: const EdgeInsets.only(right: 59, left: 50),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  width: 40,
+                  width: 25,
                 ),
-                // SizedBox(
-                //   height: 80,
-                //   width: 140,
-                //   child: Image.asset('img/home.jpg'),
-                // ),
+                SizedBox(
+                    width: 120,
+                    height: 80,
+                    child:
+                        Image.network('https://mebel.dafna.uz/img/logo.png')),
                 IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      menu = !menu;
+                      setState(() {
+                        showDialog(
+                          context: context,
+                          builder: (context) {
+                            return Dialog(
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: const [MainDrawer()],
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                        );
+                      });
+                      print(menu);
+                    },
                     icon: const Icon(
                       Icons.menu,
                       color: Colors.white,
@@ -163,16 +207,6 @@ class _MyWidgetState extends State<AppBarView> {
             ),
           )
         ],
-      ),
-    );
-  }
-
-  Widget row1(String text) {
-    return TextButton(
-      onPressed: () {},
-      child: Text(
-        text,
-        style: const TextStyle(color: Colors.white),
       ),
     );
   }
