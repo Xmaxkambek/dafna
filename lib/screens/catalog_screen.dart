@@ -1,5 +1,4 @@
 import 'package:dafna/service/dafna_api.dart';
-import 'package:dafna/widget/app_bar_view.dart';
 import 'package:flutter/material.dart';
 
 class CatalogScreen extends StatelessWidget {
@@ -26,7 +25,7 @@ class CatalogScreen extends StatelessWidget {
               ),
             );
           } else if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child:  CircularProgressIndicator());
           } else {
             throw Exception('Error');
           }
