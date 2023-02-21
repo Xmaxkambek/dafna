@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../screens/catalog_screen.dart';
 import 'drawer_view.dart';
 
 class AppBarView extends StatefulWidget {
@@ -33,7 +34,12 @@ class _MyWidgetState extends State<AppBarView> {
                 children: [
                   const SizedBox(width: 50),
                   TextButton(
-                      onPressed: () => context.go('/'),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CatalogScreen()));
+                      },
                       child: const Text('Asosiy',
                           style: TextStyle(color: Colors.white))),
                   TextButton(
