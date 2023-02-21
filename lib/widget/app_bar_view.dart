@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 import 'drawer_view.dart';
 
@@ -13,6 +12,7 @@ class AppBarView extends StatefulWidget {
 class _MyWidgetState extends State<AppBarView> {
   final TextEditingController _controller = TextEditingController();
   bool menu = false;
+
   @override
   Widget build(BuildContext context) {
     return Container(
