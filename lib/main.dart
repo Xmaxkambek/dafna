@@ -1,35 +1,31 @@
 // ignore_for_file: unused_element
 
 import 'package:dafna/models/practick.dart';
+import 'package:dafna/screens/catalog_screen.dart';
 import 'package:dafna/screens/home_screen.dart';
 import 'package:dafna/widget/app_bar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 void main() {
-  runApp(
-    const MaterialApp(debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: HomePage(),
-      ),
-    ),
-  );
+  runApp(MyApp());
 }
+
 final GoRouter _router = GoRouter(
   routes: <RouteBase>[
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return const HomePage();
+        return const HomeScreen();
       },
       routes: <RouteBase>[
         GoRoute(
-          path: 'appBAr',
+          path: 'catalog',
           builder: (BuildContext context, GoRouterState state) {
-            return const AppBarView();
+            return const CatalogScreen();
           },
         ),
-         GoRoute(
+        GoRoute(
           path: 'MyWidget',
           builder: (BuildContext context, GoRouterState state) {
             return const MyWidget();
@@ -39,6 +35,7 @@ final GoRouter _router = GoRouter(
     ),
   ],
 );
+
 class MyApp extends StatelessWidget {
   /// Constructs a [MyApp]
   const MyApp({Key? key}) : super(key: key);
