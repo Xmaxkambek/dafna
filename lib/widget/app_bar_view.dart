@@ -21,6 +21,7 @@ class _MyWidgetState extends State<AppBarView> {
         alignment: Alignment.center,
         height: 120,
         color: Colors.blue,
+        
         width: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
