@@ -40,9 +40,8 @@ class _MainDrawerState extends State<MainDrawer> {
         itemCount: _item.length,
         itemBuilder: (context, index) {
           return ListTile(
-
             hoverColor: Colors.deepOrange.shade600,
-            onTap: (() {}),
+            onTap: () {},
             title: Text(
               _item[index],
               style: const TextStyle(
