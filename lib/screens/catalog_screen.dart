@@ -30,7 +30,7 @@ class CatalogScreen extends StatelessWidget {
           } else if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           } else {
-            throw Exception('Error');
+            throw Exception('Error a');
           }
         },
       ),
