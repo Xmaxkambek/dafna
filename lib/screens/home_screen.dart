@@ -3,6 +3,7 @@ import '../widget/app_bar_view.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+  static const routeName = '/home';
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -11,12 +12,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child: AppBarView(),
-        )
-      ],
+    return Scaffold(
+      appBar: AppBar(
+        title: AppBarView(),
+        toolbarHeight: 120,
+      ),
     );
   }
 }
